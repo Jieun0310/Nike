@@ -1,0 +1,75 @@
+<div class="bar">
+    <img src="../images/icon_bar.svg" alt="bar">
+</div>
+<ul class="gnb">
+    <li>
+        <a href=""><span>Women</span></a>
+        <ul>
+            <li><a href="#">라이프 스타일</a></li>
+            <li><a href="#">재킷&베스트</a></li>
+            <li><a href="#">탑&티셔츠</a></li>
+            <li><a href="#">팬츠</a></li>
+            <li><a href="#">요가</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href=""><span>Man</span></a>
+        <ul>
+            <li><a href="#">러닝</a></li>
+            <li><a href="#">축구</a></li>
+            <li><a href="#">농구</a></li>
+            <li><a href="#">아웃도어&트레일</a></li>
+            <li><a href="#">스케이트보딩</a></li>
+            <li><a href="#">애플워치</a></li>
+            <li><a href="#">후디</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href=""><span>Kids</span></a>
+        <ul>
+            <li><a href="#">상하의 세트</a></li>
+            <li><a href="#">이지온</a></li>
+            <li><a href="#">수영복</a></li>
+            <li><a href="#">축구</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href=""><span>Accessories</span></a>
+        <ul>
+            <li><a href="#">애플워치</a></li>
+            <li><a href="#">모자</a></li>
+            <li><a href="#">나이키덩크</a></li>
+            <li><a href="#">용품</a></li>
+            <li><a href="#">수영복</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href=""><span>Sale</span></a>
+        <ul>
+            <li><a href="#">연말세일</a></li>
+            <li><a href="#">멤버 전용 상품</a></li>
+            <li><a href="#">페가수스</a></li>
+        </ul>
+    </li>
+</ul>
+
+<div class="logo">
+    <img src="../images/icon_logo.svg" alt="">
+</div>
+
+<div class="extra">
+    <a href="#"><img src="../images/icon_Research.svg" alt=""></a>
+    <a href="#"><img src="../images/icon__shopping_bag.svg" alt=""></a>
+</div>
+
+<script>
+    $('.gnb>li').hover(
+        
+        function(){
+            $(this).find('ul').stop().slideDown('fast')
+        },
+        function(){
+            $(this).find('ul').stop().slideUp('fast')
+        },
+    )
+</script>
