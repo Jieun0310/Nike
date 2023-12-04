@@ -1,2 +1,26 @@
+.hero{
+    width: 1220px;
+    padding: 0 20px;
+    margin: 0 auto;
+    height: 700px;
+    position: relative;
+    background-color: var(--gray);
+}
 
 
+.hero .photo{
+    width: 830px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.hero .photo img{
+    width: 100%;
+    display: block;
+}
+
+.hero .text_box{
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+}
