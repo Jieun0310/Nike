@@ -34,6 +34,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #fff;
+    z-index: 10;
 }
 
 .bar{
@@ -45,6 +47,10 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+
+.logo img{
+    width: 100%;
 }
 
 .gnb{
@@ -111,3 +117,35 @@ body{
 .extra a{
     display: block;
 }
+
+ @media (max-width: 576px) { 
+    .header{
+        position: fixed;
+        height: 60px;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .bar{
+        display: block;
+        margin-left: 16px;
+    }
+
+    .gnb{
+        display: none;
+    }
+
+    .extra{
+        display: flex;
+        gap: 0px;
+        margin-right: 16px;
+    }
+
+    .logo{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 56px;
+    }
+ }

@@ -24,3 +24,15 @@
     left: 0;
     bottom: 60px;
 }
+
+@media (max-width: 576px) { 
+    .hero{
+        width: 100%;
+        margin-top:60px;
+    }
+
+    .hero .photo{
+        width: 100%;
+    }
+
+}
