@@ -66,10 +66,20 @@
     $('.gnb>li').hover(
         
         function(){
-            $(this).find('ul').stop().slideDown('fast')
+            $(this).addClass('on').find('ul').stop().slideDown('fast')
         },
         function(){
-            $(this).find('ul').stop().slideUp('fast')
+            $(this).removeClass('on').find('ul').stop().slideUp('fast')
         },
     )
+
+    $('.bar').click(function() {
+        $('.gnb').toggleClass('active')
+
+        if($('.gnb').hasClass('active')) {
+            $(this).find('img').attr('src', '../images/icon_close.svg')
+        } else {
+            $(this).find('img').attr('src', '../images/icon_bars.svg')
+        }
+    })
 </script>

@@ -4,7 +4,6 @@
     margin: 0 auto;
     height: 700px;
     position: relative;
-    background-color: var(--gray);
 }
 
 
@@ -24,6 +23,67 @@
     left: 0;
     bottom: 60px;
 }
+
+.hero .text_box h1{
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.hero .text_box p{
+    width: 80%;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.hero .text_box .btn{
+    display: block;
+    width: 260px;
+    height: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    background-color: var(--primary);
+    color: var(--gray);
+}
+
+/* section_01 */
+.section_01{
+    margin-bottom: 160px;
+    color: #ddd;
+}
+.section_01 .list{
+    display: flex;
+    gap: 20px;
+}
+.section_01 .list li{
+    width: 580px;
+    height: 580px;
+    background-color: var(--primary);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section_01 .list li h3{
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.section_01 .list li a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+}
+
+
+
 
 @media (max-width: 576px) { 
     .hero{
