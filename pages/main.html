@@ -10,6 +10,11 @@
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </head>
 <body>
     <div class="wrap">
@@ -41,7 +46,19 @@
                     </li>
                 </ul>
             </div>
-            <div class="section_02"></div>
+            <div class="section_02">
+                <h2>New Releases</h2>
+                <div class="swiper_01">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+
+            </div>
             <div class="section_03"></div>
             <div class="section_04"></div>
             <div class="section_05"></div>
@@ -61,6 +78,10 @@
         </div>
     </div>
 </body>
+
+<script>
+     var swiper = new Swiper(".swiper_01", {});
+</script>
 
 <script>
     $('.header').load('../inc/header.html')
