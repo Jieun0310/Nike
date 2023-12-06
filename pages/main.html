@@ -41,28 +41,76 @@
                         <a href="#">Shop now <i class="xi-arrow-right"></i></a>
                     </li>
                     <li>
-                        <h3>for man</h3>
+                        <h3>for Men</h3>
                         <a href="#">Shop now <i class="xi-arrow-right"></i></a>
                     </li>
                 </ul>
             </div>
             <div class="section_02">
                 <h2>New Releases</h2>
-                <div class="swiper_01">
+                <div class="swiper swiper_01">
+                    <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
+                      <!-- <div class="swiper-slide">
+                            <div class="thumb">1</div>
+                            <div class="title_box">
+                                <h3>나이키 덩크 로우 레트로</h3>
+                                <p>남성 신발</p>
+                            </div>
+                        </div> -->
                     </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
                 </div>
-
+                <div class="arrows">
+                    <i class="xi-angle-left"></i>
+                    <i class="xi-angle-right"></i>
+                </div>
             </div>
-            <div class="section_03"></div>
-            <div class="section_04"></div>
+
+            <div class="section_03">
+                <div class="item">
+                    <a href="#" class="pic" >1</a>
+                    <a href="#" class="user">
+                        <div class="user_photo">사진</div>
+                        <div class="names">
+                            <h5>Serkan Bayraktar</h5>
+                            <p>Frontend developer</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#" class="pic" >2</a>
+                    <a href="#" class="user">
+                        <div class="user_photo">사진</div>
+                        <div class="names">
+                            <h5>Tom Bayraktar</h5>
+                            <p>UX/UI designer</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="section_04">
+                <h2>Shop by Feel</h2>
+                <ul class="list">
+                    <li>
+                        <div class="thumb">1</div>
+                        <a href="#" class="title">나이키 덩크 로우 레트로</a>
+                    </li>
+                    <li>
+                        <div class="thumb">2</div>
+                        <a href="#" class="title">나이키 덩크 로우 레트로</a>
+                    </li>
+                    <li>
+                        <div class="thumb">3</div>
+                        <a href="#" class="title">나이키 덩크 로우 레트로</a>
+                    </li>
+
+                </ul>
+            </div>
+
             <div class="section_05"></div>
         </div>
+
 
         <div class="footer">
             <div class="contianer">
@@ -80,7 +128,41 @@
 </body>
 
 <script>
-     var swiper = new Swiper(".swiper_01", {});
+    var items = [
+        {id:1, title:'나이키 덩크 로우 레트로1', category:'남성신발'},
+        {id:2, title:'나이키 덩크 로우 레트로2', category:'남성신발'},
+        {id:3, title:'나이키 덩크 로우 레트로3', category:'남성신발'},
+        {id:4, title:'나이키 덩크 로우 레트로4', category:'남성신발'},
+        {id:5, title:'나이키 덩크 로우 레트로5', category:'여성신발'},
+        {id:6, title:'나이키 덩크 로우 레트로6', category:'여성신발'},
+        {id:7, title:'나이키 덩크 로우 레트로7', category:'남성신발'},
+        {id:8, title:'나이키 덩크 로우 레트로8', category:'남성신발'},
+        {id:9, title:'나이키 덩크 로우 레트로9', category:'남성신발'},
+        {id:10, title:'나이키 덩크 로우 레트로10', category:'아동신발'}, 
+    ]
+
+    $(items).each(function(index, item){
+        console.log(item);
+        var row =`<div class="swiper-slide">
+                        <div class="thumb">${item.id}</div>
+                        <div class="title_box">
+                            <h3>${item.title}</h3>
+                            <p>${item.category}</p>
+                        </div>
+                    </div>`
+        var list = $('.swiper_01 .swiper-wrapper')
+        list.append(row)
+    })
+
+
+     var swiper = new Swiper(".swiper_01", {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+        nextEl: ".xi-angle-right",
+        prevEl: ".xi-angle-left",
+      },
+     });
 </script>
 
 <script>

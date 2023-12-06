@@ -57,11 +57,11 @@
     color: #ddd;
 }
 .section_01 .list{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     gap: 20px;
 }
 .section_01 .list li{
-    width: 580px;
     height: 580px;
     background-color: var(--primary);
     padding: 50px;
@@ -83,19 +83,185 @@
 }
 
 /* section2 */
-.swiper_01 .swiper-slide{
-    height: 300px;
+.section_02{
+    margin-bottom: 120px;
+    position: relative;
 }
+.section_02 h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.section_02 .arrows{
+    position: absolute;
+    top: -6px;
+    right: 0;
+    z-index: 10000;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.section_02 .arrows i{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.swiper_01 .thumb{
+    height: 280px;
+    width: 280px;
+    background-color: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper_01 .title_box{
+    padding: 20px 0;
+}
+
+.swiper_01 .title_box h3{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* section3 */
+.section_03{
+    margin-bottom: 120px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.section_03 .item{
+    background-color: var(--gray);
+    position: relative;
+}
+.section_03 .item .pic{
+    display: block;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+.section_03 .item .user{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section_03 .item .user_photo{
+    background-color: var(--primary);
+    height: 40px ;
+    width: 40px;
+    border-radius: 100%;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section_03 .item .user .names p{
+    font-size: 10px;
+}
+
+/* section4 */
+.section_04{
+    margin-bottom: 165px;
+}
+
+.section_04 h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.section_04 .list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.section_04 .list li .thumb{
+    height: 280px;
+    background-color: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section_04 .list li .title{
+    display: block;
+    padding: 20px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
 
 
 @media (max-width: 576px) { 
     .hero{
         width: 100%;
         margin-top:60px;
+        height: auto;
     }
 
     .hero .photo{
         width: 100%;
+    }
+
+    .hero .text_box{
+        position: initial;
+        padding-top: 350px;
+        text-align: center;
+    }
+    
+    .hero .text_box h1{
+        font-size: 28px;
+        line-height: 1.2;
+        font-weight: 400;
+    }
+    
+    .hero .text_box p{
+        width: 58%;
+        font-size: 13px;
+        margin: 0 auto;  
+        margin-top: 18px;
+    }
+    
+    .hero .text_box .btn{
+        margin: 32px auto;
+    }
+
+    /* section1 */
+    .section_01{
+        margin-bottom: 60px;
+    }
+    .section_01 .list{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .section_01 .list li{
+        height: 343px;
+        padding: 30px;
+    }
+    
+    .section_01 .list li h3{
+        font-size: 24px;
+    }
+    
+    .section_01 .list li a{
+        font-size: 14px;
     }
 
 }
