@@ -51,6 +51,26 @@
     color: var(--gray);
 }
 
+.section .arrows{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    z-index: 10000;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.section .arrows i{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
 /* section_01 */
 .section_01{
     margin-bottom: 160px;
@@ -93,25 +113,7 @@
     margin-bottom: 20px;
 }
 
-.section_02 .arrows{
-    position: absolute;
-    top: -6px;
-    right: 0;
-    z-index: 10000;
-    font-size: 24px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.section_02 .arrows i{
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
+
 
 .swiper_01 .thumb{
     height: 280px;
@@ -179,6 +181,7 @@
 /* section4 */
 .section_04{
     margin-bottom: 165px;
+    position: relative;
 }
 
 .section_04 h2{
@@ -186,10 +189,15 @@
     font-weight: 600;
     margin-bottom: 20px;
 }
+
+
 .section_04 .list{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    margin: 0 -10px;
+}
+
+.section_04 .list li{
+    margin: 0 10px;
+    width: 380px;
 }
 
 .section_04 .list li .thumb{
@@ -205,6 +213,37 @@
     padding: 20px 0;
     font-size: 16px;
     font-weight: 600;
+}
+
+/* section5 */
+.section_05{
+    margin-bottom: 120px;
+    text-align: center;
+}
+
+.section_05 .text_box2 h2{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.section_05 .text_box2 p{
+    font-size: 16px;
+    line-height: 1.2;
+    width: 503px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.section_05 .text_box2 a{
+    display: block;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    background-color: var(--primary);
+    color: var(--gray);
+    margin: 0 auto;
 }
 
 
@@ -262,6 +301,111 @@
     
     .section_01 .list li a{
         font-size: 14px;
+    }
+
+    /* section2 */
+    .section_02{
+        margin-bottom: 360px;
+    }
+
+    .section_02 h2{
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 17px;
+    }
+
+    .section_02 .arrows{
+        display: none;
+    }
+
+    .swiper_01{
+        position: absolute !important;
+        width: 120%;
+    }
+
+    .swiper_01 .thumb{
+        height: 218px;
+        width: 218px;
+    }
+
+    .swiper_01 .title_box{
+        padding: 10px 0;
+    }
+
+    .swiper_01 .title_box h3{
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    .swiper_01 .title_box p{
+        font-size: 12px;
+    }
+
+    /* section3 */
+    .section_03{
+        margin-bottom: 60px;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .section_03 .item .pic{
+        height: 210px;
+        font-size: 14px;
+    }
+
+    /* section4 */
+    .section_04{
+        margin-bottom: 80px;
+    }
+
+    .section_04 h2{
+        font-size: 20px;
+    }
+
+    .section_04 .list{
+        
+    }
+
+    .section_04 .list li .thumb{
+        height: 280px;
+        background-color: var(--gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section_04 .list li .title{
+        display: block;
+        padding: 20px 0;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    /* section5 */
+    .section_05{
+        margin-bottom: 80px;
+    }
+
+    .section_05 .text_box2 h2{
+        font-size: 24px;
+    }
+
+    .section_05 .text_box2 p{
+        font-size: 12px;
+        line-height: 1.5;
+        width: 343px;
+        margin-top: 34px;
+        margin-bottom: 26px;
+    }
+
+    .section_05 .text_box2 a{
+        font-size: 12px;
+        display: block;
+        width: 130px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 20px;
+        background-color: var(--primary);
+        color: var(--gray);
+        margin: 0 auto;
     }
 
 }

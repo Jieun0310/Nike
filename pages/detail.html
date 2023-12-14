@@ -13,10 +13,19 @@
 </head>
 <body>
     <div class="header"></div>
-    <h1>Nike detail page</h1>
+    <h1><a href="#" class="logo">Nike detail page</a></h1>
+    <p><a href="#">안녕1</a></p>
+    <p><a href="#">안녕2</a></p>
+    <p><a href="#">안녕3</a></p>
+    <p><a href="#">안녕4</a></p>
+    <p><a href="#">안녕5</a></p>
+
+    <script>
+        $('.header').load('../inc/nav.html')
+        $('a').attr('href', './event.html')
+        $('a.logo').attr('href', './main.html')
+    </script>
 </body>
 
-<script>
- $('.header').load('../inc/nav.html')
-</script>
+
 </html>

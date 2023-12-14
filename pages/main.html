@@ -8,13 +8,19 @@
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <!-- slick -->
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -46,7 +52,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="section_02">
+            <div class="section section_02">
                 <h2>New Releases</h2>
                 <div class="swiper swiper_01">
                     <!-- Additional required wrapper -->
@@ -89,26 +95,29 @@
                 </div>
             </div>
 
-            <div class="section_04">
+            <div class="section section_04">
                 <h2>Shop by Feel</h2>
-                <ul class="list">
+                <ul class="list slide_02">
                     <li>
                         <div class="thumb">1</div>
                         <a href="#" class="title">나이키 덩크 로우 레트로</a>
                     </li>
-                    <li>
-                        <div class="thumb">2</div>
-                        <a href="#" class="title">나이키 덩크 로우 레트로</a>
-                    </li>
-                    <li>
-                        <div class="thumb">3</div>
-                        <a href="#" class="title">나이키 덩크 로우 레트로</a>
-                    </li>
-
                 </ul>
+
+                <div class="arrows">
+                    <i class="xi-angle-left"></i>
+                    <i class="xi-angle-right"></i>
+                </div>
             </div>
 
-            <div class="section_05"></div>
+            <div class="section_05">
+                <div class="text_box2">
+                    <h2>2023 <br> 국가대표팀 저지</h2>
+                    <p>차세대 드라이 핏 ADV 기술로 더욱 강력해진 2023 대한민국 축구 국가대표팀
+                    저지 스토리를 나이키 앱에서 만나 보세요.</p>
+                    <a href="#" class="btn2">자세히 보기</a>
+                </div>
+            </div>
         </div>
 
 
@@ -126,6 +135,10 @@
         </div>
     </div>
 </body>
+
+<script>
+    $('a').attr('href','./detail.html')
+</script>
 
 <script>
     var items = [
@@ -156,11 +169,17 @@
 
 
         var swiper = new Swiper(".swiper_01", {
-        slidesPerView: 4,
+        slidesPerView: 2,
         spaceBetween: 20,
         navigation: {
-        nextEl: ".xi-angle-right",
-        prevEl: ".xi-angle-left",
+        nextEl: ".section_02 .xi-angle-right",
+        prevEl: ".section_02 .xi-angle-left",
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
       },
      });
 </script>
@@ -194,6 +213,47 @@
         origin:'left',
         distance: '50px',
     });
+
+</script>
+
+<script>
+     var slickItems = [
+            { id: 1, title:'나이키 덩크 로우 레트로'},
+            { id: 2, title:'나이키 로우 레트로'},
+            { id: 3, title:'나이키 덩크  레트로'},
+            { id: 4, title:'나이키 덩크 헬로우 레트로'},
+            { id: 5, title:'나이키 덩크 로우 지하철'},
+            { id: 6, title:'나이키 덩크 로우 레트로'},
+            { id: 7, title:'나이키 덩크 로우 레트로'},
+        ]
+
+        var list = $('.slide_02')
+
+        $(slickItems).each(function(index, item) {
+            var row = `<li>
+                        <div class="thumb">${item.id}</div>
+                        <a href="#" class="title">${item.title}</a>
+                       </li>`
+            list.append(row)          
+        })
+
+
+        $('.slide_02').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: false,
+            prevArrow: $('.section_04 .xi-angle-left'),
+            nextArrow: $('.section_04 .xi-angle-right'),
+            responsive: [
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }               
+            ]
+        })
+
 
 </script>
 </html>
